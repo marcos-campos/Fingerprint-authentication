@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/current_invoice_tv_invoice_closed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Fatura fechada"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="60dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/home_btn_pagar"
+        app:layout_constraintTop_toTopOf="@id/current_invoice_tv_invoice_closed"
+        android:text="vencimento 20/03"/>
+
+    <TextView
+        android:id="@+id/current_invoice_tv_partial_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="valor parcial"
+        app:layout_constraintTop_toBottomOf="@id/current_invoice_tv_invoice_closed"
+        app:layout_constraintStart_toStartOf="@id/current_invoice_tv_invoice_closed"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/current_invoice_tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 1.154,90"
+        app:layout_constraintStart_toStartOf="@id/current_invoice_tv_invoice_closed"
+        app:layout_constraintTop_toBottomOf="@id/current_invoice_tv_partial_value"
+        android:textColor="@color/purple"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/home_btn_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/current_invoice_tv_value"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="15dp"
+        android:text="Pagar"
+        android:textColor="@color/purple"
+        android:backgroundTint="@color/gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
