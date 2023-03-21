@@ -1,14 +1,20 @@
 package com.debug.authentication.ui.main
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.provider.CalendarContract
+import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.debug.authentication.R
 import com.google.android.material.tabs.TabLayout
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -44,5 +50,4 @@ class HomeFragment : Fragment() {
         val tabLayoutHome = view?.findViewById<TabLayout>(R.id.home_tab_layout)
         tabLayoutHome.setupWithViewPager(viewPagerHome)
     }
-
 }

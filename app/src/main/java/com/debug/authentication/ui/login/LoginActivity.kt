@@ -1,15 +1,18 @@
 package com.debug.authentication.ui.login
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.hardware.biometrics.BiometricPrompt
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.debug.authentication.HomeActivity
 import com.debug.authentication.R
+import java.util.*
 import java.util.concurrent.Executor
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -52,7 +55,11 @@ class LoginActivity : AppCompatActivity() {
 
 
         fingerPrint.setOnClickListener {
-            biometricPrompt.authenticate(promptInfo)
+//            biometricPrompt.authenticate(promptInfo)
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+
         }
+
     }
 }
